@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="../../static/css/login.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+
+
+    <title>LOGIN PAGE</title>
+
+  </head>
+  <body>
+
+
+    <div class="layer">
+      <div  class="container">
+        <form action="{% url 'portal:user_login' %}" method="POST">
+          {% csrf_token %}
+        <div class="logo" style="background-image: url('../../static/images/logo.png');"></div>
+
+
+        <span class="title_form">LOG IN</span>
+        <br>
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1">
+              <i class="fa fa-user"></i>
+            </span>
+            <span class="glyphicons glyphicons-user"></span>
+          </div>
+          <input type="text" name="username" class="form-control" placeholder="Username" id="user" aria-label="Username" aria-describedby="basic-addon1">
+        </div>
+
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1">
+              <i class="fa fa-lock"></i>
+            </span>
+          </div>
+          <input type="password" name="password" class="form-control" placeholder="Password" id="pass" aria-label="Password" aria-describedby="basic-addon1">
+        </div>
+
+        <input type="submit" name="" value="Login" class="btn btn-outline-success login-form-btn">
+        <!-- <button type="button" class="btn btn-outline-success login-form-btn" id="log">Login</button> -->
+
+        <br>
+        <br>
+        <div class="custom-control custom-checkbox">
+          <input type="checkbox" class="custom-control-input" id="customCheck1">
+          <label class="custom-control-label" onclick="myFunction()" for="customCheck1" style="font-size:10pt; line-height:24px;">Show Password</label>
+        </div>
+
+        <span style="font-size: 12pt; color: red; display:none;" id="wrong"> Wrong Username/Password </span>
+
+        <div class="btn-group btn-group-toggle" data-toggle="buttons">
+          <label class="inp btn btn-secondary active">
+            <input class="" type="radio" name="options" id="option1" autocomplete="off" checked> Student
+          </label>
+          <label class="inp btn btn-secondary">
+            <input class="inp" type="radio" name="options" id="option2" autocomplete="off"> Teacher
+          </label>
+        </div>
+      </form>
+
+      </div>
+    </div>
+
+
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
+    <script src="../../static/js/login.js"></script>
+  </body>
+</html>
